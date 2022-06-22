@@ -1,0 +1,36 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .btn-skip-intro {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        color: rgb(87, 87, 87);
+
+        opacity: 0;
+        animation-name: showSkipText;
+        animation-duration: 10s;
+        animation-timing-function:ease-out;
+        animation-iteration-count: 1;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+
+        @keyframes showSkipText {
+            0% {
+                opacity: 0;    
+            }
+
+            50% {
+                opacity: 1;    
+            }
+            100% {
+                opacity: 0;  
+            }
+        }
+    }
+}

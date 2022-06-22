@@ -1,0 +1,40 @@
+.thank-you {
+    position: relative;
+    z-index: 1003;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .back-to-main {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 1003;
+        text-decoration: none;
+        color: #08FDD8;
+        font-size: 2rem;
+    }
+
+    .gratitude-text {
+        position: relative;
+        z-index: 1003;
+        
+        color: #08FDD8;
+        
+        svg {
+        width: 20px;
+        }
+        
+        img {
+            width: 200px;
+            height: auto;
+        }
+        
+        p {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    }
+}
