@@ -1,0 +1,26 @@
+.main {
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    height: 100vh;
+
+    &.skip {
+        opacity: 0;
+        animation-name: showBlock;
+        animation-duration: 10s;
+        animation-timing-function:ease-out;
+        animation-iteration-count: 1;
+        animation-delay: 20s;
+        animation-fill-mode: forwards;
+    
+    
+        @keyframes showBlock {
+            0% {
+                opacity: 0;    
+            }
+            100% {
+                opacity: 1;  
+            }
+        }
+    }
+}

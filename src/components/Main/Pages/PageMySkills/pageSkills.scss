@@ -1,0 +1,301 @@
+.skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //width: 100%;
+    height: 100vh;
+    background: #141414;
+    background: linear-gradient(143deg, rgba(49, 49, 49, 0.5) -19%, #0e0d0d 60%);
+    padding: 0 5rem;
+    background-size: 200% 200%;
+    animation: gradientBlock 10s ease infinite;
+
+    @keyframes gradientBlock {
+      0% {
+        background-position: 0 50%;
+      } 
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+        display: block;
+        overflow-y: scroll;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 0 2rem;
+        padding-top: 3rem;
+    }  
+
+    .skills-text {
+        width: 50%;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        text-align: justify;
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 3rem;
+        }    
+
+        .description {
+            margin-top: 2rem;
+
+            @media screen and (max-width: 550px) {
+                margin-top: 5rem;
+            }
+        }
+
+        .span-text {
+            padding: 0;
+
+            @media screen and (max-width: 550px) {
+                margin-top: 0%;
+            }
+        }
+
+        a {
+            color: #08FDD8;
+        }
+    }
+
+    .skills-statistics {
+        width: 50%;
+        margin-left: 4rem;
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            margin: 0;
+            padding-bottom: 6rem;
+        }  
+        
+        .skills__item {
+            margin-bottom: 3rem;
+            width: 100%;
+            display: flex;
+                    
+            .text-item {
+                width: 0%;
+                margin: auto 0;
+                margin-right: 10rem;
+                font-size: 1.5rem;
+            }
+    
+            
+            .span-statistic {
+                position: relative;
+                background-color: #272727;
+                height: 2px;
+                width: 100%;
+                margin: auto 0;
+                
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 1px;
+                    transform: translateY(-50%);
+                    width: 0%;
+                    content: '';
+                    animation-name: moveSkill;
+                    animation-duration: 4s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                }
+                
+                &#skill-redux:after {
+                    width: 70%;
+                    background-color: #ff00c4;
+                    
+                    animation-name: moveSkillRedux;
+                    animation-duration: 2s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillRedux {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 70%;
+                        }
+                    }
+                }
+                
+                &#skill-js:after {
+                    width: 60%;
+                    background-color: #ecfd16;
+                    
+                    animation-name: moveSkillJs;
+                    animation-duration: 2s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillJs {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 60%;
+                        }
+                    }
+                }
+                
+                &#skill-react:after {
+                    width: 70%;
+                    background-color: #fd1616;
+                    
+                    animation-name: moveSkillReact;
+                    animation-duration: 2s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillReact {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 70%;
+                        }
+                    }
+                }
+                
+                &#skill-node:after {
+                    width: 20%;
+                    background-color: #078dff;
+                    
+                    animation-name: moveSkillNode;
+                    animation-duration: 4s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillNode {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 20%;
+                        }
+                    }
+                }
+                
+                &#skill-jquery:after {
+                    width: 60%;
+                    background-color: #42fd16;
+                    
+                    animation-name: moveSkillJquery;
+                    animation-duration: 2s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillJquery {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 60%;
+                        }
+                    }
+                }
+                
+                &#skill-php:after {
+                    width: 20%;
+                    background-color: #5b55ff;
+                    
+                    animation-name: moveSkillPhp;
+                    animation-duration: 4s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillPhp {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 20%;
+                        }
+                    }
+                }
+
+                &#skill-sql:after {
+                    width: 30%;
+                    background-color: #7aff85;
+                    
+                    animation-name: moveSkillSql;
+                    animation-duration: 4s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillSql {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 30%;
+                        }
+                    }
+                }
+                
+                &#skill-c:after {
+                    width: 15%;
+                    background-color: #ff9300;
+                    
+                    animation-name: moveSkillC;
+                    animation-duration: 4s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillC {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 15%;
+                        }
+                    }
+                }
+                
+                &#skill-java:after {
+                    width: 15%;
+                    background-color: #ff5050;
+                    
+                    animation-name: moveSkillJava;
+                    animation-duration: 4s;
+                    animation-timing-function:ease-out;
+                    animation-iteration-count: 1;
+                    
+                    @keyframes moveSkillJava {
+                        0% {
+                            width: 0%;
+                        }
+                        
+                        100% {
+                            width: 15%;
+                        }
+                    }
+                }
+            }
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

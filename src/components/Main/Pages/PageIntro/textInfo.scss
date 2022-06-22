@@ -1,0 +1,353 @@
+.info {
+    position: absolute;
+    top: 50%;
+    left: 7rem;
+    color: white;
+    z-index: 5;
+    
+
+    transform: translate(0%, -65%);
+
+    @media screen and (max-width: 550px) {
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text__content {
+      @media screen and (max-width: 550px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }  
+}
+
+.text__me {
+    font-size: 7.2rem;
+    font-weight: 500;
+    line-height: 1;
+
+  @media screen and (max-width: 550px) {
+    font-size: 4rem;
+  }
+}
+
+.glitch {
+    position: relative;
+    color: white;
+    margin: 0 auto;
+    width: 400px;
+
+    &:after {
+      animation: glitch-animation 8s infinite linear alternate-reverse;
+      background: black;
+      clip: rect( 0, 900px, 0, 0 );
+      color: white;
+      content: attr( data-text );
+      left: 2px;
+      overflow: hidden;
+      position: absolute;
+      text-shadow: -1px 0 red;
+      top: 12px;
+    }
+
+    &:before {
+      animation: glitch-animation-2 9s infinite linear alternate-reverse;
+      background: black;
+      clip: rect( 0, 900px, 0, 0 );
+      color: white;
+      content: attr( data-text );
+      left: -2px;
+      overflow: hidden;
+      position: absolute;
+      text-shadow: 1px 0 blue;
+      top: 12px;
+    }
+
+    @keyframes glitch-animation {
+      0% {
+        clip: rect(42px, 9999px, 44px, 0);
+      }
+      5% {
+        clip: rect(12px, 9999px, 59px, 0);
+      }
+      10% {
+        clip: rect(48px, 9999px, 29px, 0);
+      }
+      15.0% {
+        clip: rect(42px, 9999px, 73px, 0);
+      }
+      20% {
+        clip: rect(63px, 9999px, 27px, 0);
+      }
+      25% {
+        clip: rect(34px, 9999px, 55px, 0);
+      }
+      30.0% {
+        clip: rect(86px, 9999px, 73px, 0);
+      }
+      35% {
+        clip: rect(20px, 9999px, 20px, 0);
+      }
+      40% {
+        clip: rect(26px, 9999px, 60px, 0);
+      }
+      45% {
+        clip: rect(25px, 9999px, 66px, 0);
+      }
+      50% {
+        clip: rect(57px, 9999px, 98px, 0);
+      }
+      55.0% {
+        clip: rect(5px, 9999px, 46px, 0);
+      }
+      60.0% {
+        clip: rect(82px, 9999px, 31px, 0);
+      }
+      65% {
+        clip: rect(54px, 9999px, 27px, 0);
+      }
+      70% {
+        clip: rect(28px, 9999px, 99px, 0);
+      }
+      75% {
+        clip: rect(45px, 9999px, 69px, 0);
+      }
+      80% {
+        clip: rect(23px, 9999px, 85px, 0);
+      }
+      85.0% {
+        clip: rect(54px, 9999px, 84px, 0);
+      }
+      90% {
+        clip: rect(45px, 9999px, 47px, 0);
+      }
+      95% {
+        clip: rect(37px, 9999px, 20px, 0);
+      }
+      100% {
+        clip: rect(4px, 9999px, 91px, 0);
+      }
+    }
+
+    @keyframes glitch-animation-2 {
+      0% {
+        clip: rect(65px, 9999px, 100px, 0);
+      }
+      5% {
+        clip: rect(52px, 9999px, 74px, 0);
+      }
+      10% {
+        clip: rect(79px, 9999px, 85px, 0);
+      }
+      15.0% {
+        clip: rect(75px, 9999px, 5px, 0);
+      }
+      20% {
+        clip: rect(67px, 9999px, 61px, 0);
+      }
+      25% {
+        clip: rect(14px, 9999px, 79px, 0);
+      }
+      30.0% {
+        clip: rect(1px, 9999px, 66px, 0);
+      }
+      35% {
+        clip: rect(86px, 9999px, 30px, 0);
+      }
+      40% {
+        clip: rect(23px, 9999px, 98px, 0);
+      }
+      45% {
+        clip: rect(85px, 9999px, 72px, 0);
+      }
+      50% {
+        clip: rect(71px, 9999px, 75px, 0);
+      }
+      55.0% {
+        clip: rect(2px, 9999px, 48px, 0);
+      }
+      60.0% {
+        clip: rect(30px, 9999px, 16px, 0);
+      }
+      65% {
+        clip: rect(59px, 9999px, 50px, 0);
+      }
+      70% {
+        clip: rect(41px, 9999px, 62px, 0);
+      }
+      75% {
+        clip: rect(2px, 9999px, 82px, 0);
+      }
+      80% {
+        clip: rect(47px, 9999px, 73px, 0);
+      }
+      85.0% {
+        clip: rect(3px, 9999px, 27px, 0);
+      }
+      90% {
+        clip: rect(26px, 9999px, 55px, 0);
+      }
+      95% {
+        clip: rect(42px, 9999px, 97px, 0);
+      }
+      100% {
+        clip: rect(38px, 9999px, 49px, 0);
+      }
+    }
+}
+
+.span-text {
+    color: #fff;
+    font-weight: 700;
+    
+    margin-top: 1rem;
+    padding-left: 1rem;
+    
+    .m-r {
+        margin-right: 3rem;
+    }
+    
+    & span {
+      display: inline-block;
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 500;
+      cursor: pointer;
+      -webkit-font-smoothing: antialiased;
+    } 
+
+    & span::before,
+    & span::after {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: -1px;
+      transform-origin: left top;
+      transition: all ease-out 0.3s;
+      content: attr(data-text);
+    }
+
+    & span::before {
+      z-index: 1;
+      color: rgba(0,0,0,0.2);
+      transform: scale(1.1, 1) skew(0deg, 20deg);
+    }
+
+    & span::after {
+      z-index: 2;
+      color: #08FDD8;
+      text-shadow: -1px 0 1px #684da3, 1px 0 1px rgba(0,0,0,0.8);
+      transform: rotateY(-40deg);
+    }
+
+    & span:hover::before {
+      transform: scale(1.1, 1) skew(0deg, 5deg);
+    }
+
+    & span:hover::after {
+      transform: rotateY(-10deg);
+    }
+
+    & span + span {
+      margin-left: .8rem;
+    }
+
+    @media (min-width: 20em) {
+      & {
+        font-size: 2rem;
+      }
+      & span::before,
+      & span::after {
+        display: block;
+      }
+    }
+    @media (min-width: 30em) {
+      & {
+        font-size: 2.4rem;
+      }
+    }
+    @media (min-width: 40em) {
+      & {
+        font-size: 2.4rem;
+      }
+    }
+    @media (min-width: 60em) {
+      & {
+        font-size: 4.4rem;
+      }
+    }
+}
+
+.prof__me {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    color: #575757;
+
+    @media screen and (max-width: 550px) {
+      margin-top: 2rem;
+    }
+}
+
+.send-link {
+
+    animation: btnBols 1s linear alternate infinite;
+    
+    @keyframes btnBols {
+        0% {
+            transform: translate3d(0, -10px, 0);
+        }
+        50% {
+            transform: translate3d(0, 0px, 0);
+        }
+        100% {
+            transform: translate3d(0, 10px, 0);
+        }
+    }
+    
+    .send-btn {
+        position: relative;
+
+        color: #fff;
+        background: none;
+        font-weight: 500;
+        padding: 8px 21px;
+        text-decoration: none;
+        border: 2px solid #08FDD8;
+        z-index: 1;
+
+        transition: color .2s linear;
+        &:hover {
+            color: #000;
+
+            &:after,
+            &:before {
+                width: 65px;
+            }
+        }
+
+        &:after,
+        &:before {
+            display: block;
+            content: "";
+
+            position: absolute;
+            top: -2px;
+            height: 38px;
+            width: 0px;
+            z-index: -1;
+            background-color: #08FDD8;
+
+            transition: width .2s linear;
+        }
+        &:after {
+            left: 50%;
+        }
+
+        &:before {
+            right: 50%;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.page-intro {
+    min-height: 100vh;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    cursor: zoom-in;
+
+    .map-planet {
+        //position: absolute;
+        position: relative;
+        z-index: 4;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .sun {
+            width: 1500px;
+            margin-left: 8rem;
+
+            @media screen and (max-width: 550px) {
+                margin: 0;
+            }
+        }
+    }
+
+    .my-text {
+        position: absolute;
+        bottom: 1rem;
+
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        z-index: 3;
+        opacity: .3;
+        
+        p {
+            font-style: italic;
+            color: #575757;
+            svg {
+                width: 10px;
+
+                path {
+                    color: #08FDD8;
+                }
+            }
+        }
+    }
+}

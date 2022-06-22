@@ -1,0 +1,119 @@
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+
+
+    .intro_text {
+        position: relative;
+
+        span {
+            opacity: 0; 
+            transition: opacity .5s linear;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 1.2rem;
+            }
+
+            &.one {
+                animation-name: showOne;
+                animation-duration: 3s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: 1;
+                //animation-delay: 18s;
+                animation-fill-mode: forwards;
+                
+            
+                  @keyframes showOne {
+                      0% {
+                          opacity: 0;    
+                      }
+
+                      50% {
+                          opacity: 1;    
+                      }
+                      100% {
+                          opacity: 0;  
+                      }
+                  }
+            }
+
+            &.two {
+                animation-name: showTwo;
+                animation-duration: 3s;
+                animation-timing-function:ease-out;
+                animation-iteration-count: 1;
+                //animation-delay: 18s;
+                animation-fill-mode: forwards;
+                
+            
+                  @keyframes showTwo {
+                      0% {
+                          opacity: 0;    
+                      }
+
+                      50% {
+                          opacity: 1;    
+                      }
+                      100% {
+                          opacity: 0;  
+                      }
+                  }
+            }
+
+            &.three {
+                animation-name: showThree;
+                animation-duration: 3s;
+                animation-timing-function:ease-out;
+                animation-iteration-count: 1;
+                //animation-delay: 18s;
+                animation-fill-mode: forwards;
+                
+            
+                  @keyframes showThree {
+                      0% {
+                          opacity: 0;    
+                      }
+
+                      50% {
+                          opacity: 1;    
+                      }
+                      100% {
+                          opacity: 0;  
+                      }
+                  }
+            }
+
+            &.four {
+                animation-name: showFour;
+                animation-duration: 3s;
+                animation-timing-function:ease-out;
+                animation-iteration-count: 1;
+                //animation-delay: 18s;
+                animation-fill-mode: forwards;
+                
+            
+                  @keyframes showFour {
+                      0% {
+                          opacity: 0;    
+                      }
+
+                      50% {
+                          opacity: 1;    
+                      }
+                      100% {
+                          opacity: 0;  
+                      }
+                  }
+            }
+        }
+    }
+}

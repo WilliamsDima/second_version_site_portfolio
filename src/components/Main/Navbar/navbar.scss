@@ -1,0 +1,234 @@
+
+.burger {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1002;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+
+    @media screen and (max-width: 550px) {
+        display: flex;
+    }
+
+    &:after, &:before {
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #08FDD8;
+        transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) all .2s;
+    }
+
+    &:after {
+        top: 0;
+    }
+
+    &:before {
+        bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #08FDD8;
+        transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) all .2s;
+    }
+
+    &.active {
+        &:after {
+            top: 50%;
+            transform: rotate(45deg) translateY(-50%);
+        }
+    
+        &:before {
+            bottom: 50%;
+            transform: rotate(-45deg) translateY(50%);
+        }
+
+        span {
+            opacity: 0;
+        }
+    }
+}
+
+.nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+
+    @media screen and (max-width: 550px) {
+        transform: translateY(-100%);
+        padding: 0;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: linear-gradient(143deg, rgba(49, 49, 49, 1) -19%, #0e0d0d 60%);
+        background-size: 200% 200%;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) all .2s;
+        animation: gradientBlock 10s ease infinite;
+    
+        @keyframes gradientBlock {
+          0% {
+            background-position: 0 50%;
+          } 
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0 50%;
+          }
+        }
+
+        &.active {
+            transform: translateY(0%);
+        }
+    }
+
+    .nav_item {
+        position: relative;
+        width: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 770px) {
+            width: 12rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            display: block;
+            width: 100%;
+            height: 0;
+            margin-bottom: 6rem;
+        }
+
+        &.active {
+            svg {
+
+                path {
+                    fill: #08FDD8;
+                }
+            }
+
+            p {
+                color: #08FDD8;
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+            &:hover {
+                svg {
+                    opacity: 0;  
+
+                    @media screen and (max-width: 770px) {
+                        opacity: 1;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        opacity: 0;
+                     }
+                }
+
+                p {
+                    opacity: 1;
+
+                    @media screen and (max-width: 770px) {
+                        opacity: 0;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        opacity: 1;
+                     }
+                }
+            }
+
+            svg {
+                width: 3rem;
+                transition: all .2s linear;
+
+                @media screen and (max-width: 550px) {
+                   opacity: 0;
+                }
+
+
+                path {
+                    fill: rgb(90, 90, 90);
+                }
+            }
+
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                transition: all .2s linear;
+                opacity: 0;
+                color: rgb(90, 90, 90);
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 1rem;
+                }
+
+                @media screen and (max-width: 550px) {
+                    opacity: 1;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .social {
+        position: absolute;
+        bottom: 0;
+        padding: 1rem 0;
+        display: none;
+        width: 100%;
+        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 550px) {
+            display: flex;
+        }
+
+        a {
+            margin-right: 6rem;
+
+            img {
+                width: 3rem; 
+            }
+
+            &:last-child {
+                margin-right: 0rem;
+                img {
+                    width: 18px;
+                }
+            }
+        }
+    }
+}

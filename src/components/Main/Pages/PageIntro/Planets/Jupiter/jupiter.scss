@@ -1,0 +1,141 @@
+.jupiter-orbit {
+    border: 1px solid #433f3f;
+    border-radius: 50%;
+    position: absolute;
+    // top: -50%;
+    // left: 40%;
+    z-index: 4;
+
+    width: 6000px;
+    height: 6000px;
+    display: flex;
+    align-items: center;
+    transition: all .2s linear;
+
+    transform: rotateZ(0deg);
+
+    animation: orbitJupiterRotate 400s linear infinite;
+
+    @keyframes orbitJupiterRotate {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    .planet-wrap {
+
+        position: absolute;
+        top: 40%;
+        left: -2%;
+        cursor: pointer;
+        z-index: 4;
+        transform: scale(0.9);
+        transition:cubic-bezier(0.785, 0.135, 0.15, 0.86) all .2s;
+    
+        .planet-text {
+            position: absolute;
+            top: 150%;
+            left: -130%;
+            z-index: 1;
+            opacity: 0;
+            transition:cubic-bezier(0.785, 0.135, 0.15, 0.86) all .2s;
+            background: transparent;
+            padding: 1rem 2rem;
+            transform: rotateZ(0deg);
+            font-size: 3rem;
+            width: 700px;
+
+            animation: textJupiter 400s linear infinite;
+
+            @keyframes textJupiter {
+                0% {
+                    transform: rotateZ(0deg);
+                }
+                
+                100% {
+                    transform: rotateZ(-360deg);
+                }
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    
+        &:hover {
+            transform: scale(7);
+    
+            .planet-text {
+                opacity: 1;
+            }
+        }
+    
+        .jupiter {
+        
+            position: relative;
+            z-index: 2; 
+            
+            & .planet{
+                width:300px;
+                height:300px;
+                position:absolute;
+                border-radius:50%;
+                overflow:hidden;
+        
+                left:50%;
+                top:50%;
+                margin:-150px;
+                z-index: -1;
+        
+                opacity: 1;
+            }
+        
+            & .dark {
+                position: relative;
+                top: 40%;
+        
+                border-radius:50%;
+                width:300px;
+                height:300px;
+                opacity: 1;
+                box-shadow: 0 0 14px -4px #191817;
+                
+                background: 
+                linear-gradient(104deg, black 15%, rgba(255, 255, 255, 0) 95%), 
+                linear-gradient(145deg, black 15%, rgba(255, 255, 255, 0) 85%), 
+                linear-gradient(68deg, black 17%, rgba(255, 255, 255, 0) 100%);
+            }
+        
+            .planet .mask{
+                width:100%;
+                height:100%;
+                position: absolute;
+                box-shadow:inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+                border-radius:50%;
+            }
+            
+            .background{
+                animation: translateBackground 5s infinite linear;  
+                background:url('../../../../../../assets/images/planets/Jupiter.jpg') repeat-x;
+                width:300px;
+                height:300px;
+                position:absolute;
+                border-radius:50%;
+        
+            }
+        
+            .wrap{
+                width:300px;
+                height:300px;
+                position:absolute;
+                border-radius:50%;
+                transform:rotateZ(23.5deg);
+        
+            }
+        }
+    }
+}
