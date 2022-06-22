@@ -1,0 +1,53 @@
+.preloder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    background: #141414;
+    background: linear-gradient(143deg, rgb(49, 49, 49,) -19%, #0e0d0d 60%);
+    background-size: 200% 200%;
+    animation: gradientBlock 10s ease infinite;
+    transition: .2s linear all;
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @keyframes gradientBlock {
+      0% {
+        background-position: 0 50%;
+      } 
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
+    }
+
+    .loader {
+        width: 8rem;
+        height: 8rem;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        border-top-color: #08fdd8;
+        animation: 2s loder infinite linear;
+
+        @keyframes loder {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
